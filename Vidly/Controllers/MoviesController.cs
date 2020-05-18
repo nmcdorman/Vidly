@@ -26,7 +26,7 @@ namespace Vidly.Controllers
         // GET: Movies/Random
         public ActionResult Random()
         {
-            var movie = new Movie() { Name = "Shrek!" };
+            var movies = GetMovies();
             var customers = new List<Customer>
             {
                 new Customer { Name = "Customer 1" },
@@ -35,7 +35,7 @@ namespace Vidly.Controllers
 
             var viewModel = new RandomMovieViewModel
             {
-                Movie = movie,
+                Movies = movies,
                 Customers = customers
             };
 
