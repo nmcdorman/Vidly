@@ -15,5 +15,6 @@ namespace Vidly.Models
         public bool IsSubscribedToNewsletter { get; set; }
         public MembershipType MembershipType { get; set; }  //Id, SignUpFee, DurationInMonths, DiscountRate
         public byte MembershipTypeId { get; set; }  // EF recognizes this as a Foreign Key
+        public DateTime? BirthDate { get; set; }
     }
 }
